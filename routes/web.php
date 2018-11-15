@@ -11,7 +11,13 @@
 |
 */
 
+//Usually these would be grouped as would the controllers into namespace groups
+
+/** VIEWS */
 Route::get('/','ViewController@loadViewIndex');
 Route::get('/contact','ViewController@loadViewForm');
 Route::get('/thank-you','ViewController@loadViewThanks');
+Route::get('/messages','ViewController@loadViewAllMessages');
+/** Contact */
+Route::post('/contact/new','ContactController@processRequest');
 

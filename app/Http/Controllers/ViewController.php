@@ -9,6 +9,8 @@
 namespace App\Http\Controllers;
 
 
+use App\ContactRequest;
+
 class ViewController extends Controller
 {
 
@@ -37,6 +39,11 @@ class ViewController extends Controller
     public function loadViewThanks()
     {
         return view('thanks');
+    }
+
+    public function loadViewAllMessages()
+    {
+        return view('messages',['contacts' => ContactRequest::all()]);
     }
 
 }

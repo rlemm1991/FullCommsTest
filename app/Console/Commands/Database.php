@@ -39,7 +39,7 @@ class Database extends Command
     public function handle()
     {
         try {
-            DB::raw('CREATE DATABASE '.env("DB_DATABASE").';');
+            DB::raw('CREATE SCHEMA'.env("DB_DATABASE"). ';');
             echo "Database created";
         }catch (\PDOException $exception)
         {
