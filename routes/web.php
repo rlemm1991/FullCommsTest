@@ -21,3 +21,7 @@ Route::get('/messages','ViewController@loadViewAllMessages');
 /** Contact */
 Route::post('/contact/new','ContactController@processRequest');
 
+Route::get('/mail',function (){
+
+});
+
